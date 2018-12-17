@@ -5,6 +5,7 @@ class Product(models.Model):
     device_code = models.CharField(max_length=20)
     device_price = models.CharField(max_length=10)
     img_link = models.CharField(max_length=200, default="")
+    ktshop_link = models.CharField(max_length=200, default="")
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
