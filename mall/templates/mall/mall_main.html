@@ -14,7 +14,7 @@
                 {% endfor %}
             </ul>
             <a href="https://shop.kt.com/smart/productView.do?prodNo={{ product.device_code }}&vndrNo=AA01344" target="_blank">
-                <img src="{{ product.img_link }}" alt="{{ product.device_name }}" style="height:300px;" class="img-responsive center-block"/>
+                <img src="{{ product.device_image_file.url }}" alt="{{ product.device_name }}" style="height:300px;" class="img-responsive center-block"/>
                 <div class="prodInfo center-block">
                     <div class="prodName">{{ product.device_name }}</div>
                     <div class="prodPrice">월 <span>{{ product.device_price }}</span>원~</div>
