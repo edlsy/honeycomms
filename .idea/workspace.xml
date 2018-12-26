@@ -2,72 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5065a7e-30de-4e41-8387-a84a14fb614f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.ebextensions/django.config" beforeDir="false" afterPath="$PROJECT_DIR$/.ebextensions/django.config" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/admin.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/animate.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/blank.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/bootstrap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fancybox_loading.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fancybox_loading@2x.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fancybox_overlay.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fancybox_sprite.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fancybox_sprite@2x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fonts/coreicons-webfont-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fonts/coreicons-webfont-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fonts/coreicons-webfont-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/fonts/coreicons-webfont-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/honeycomms.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/honeycomms_ie9.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/jquery.fancybox.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/nomalize.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/css/style.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/NanumBarunGothic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/NanumGothic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/glyphicons-halflings-regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/glyphicons-halflings-regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/glyphicons-halflings-regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/fonts/glyphicons-halflings-regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/G7 ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/G7+ ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/LG V30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/LG V40 ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/LG X4+.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/LG X5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/LG X500.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/V35 ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/iPhone 6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/iPhone 8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/iPhone X.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 A6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 A7(2018).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 A8 .png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 J7 (2017).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 Jean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 On7 Prime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 S9+.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 S9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시 노트9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/갤럭시노트8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/device_imgs/샤오미 포코폰 F1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/gray_gradient.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/left.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/imgs/right.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/animatescroll.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/bootstrap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/jquery.fancybox.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/jquery.fancybox.pack.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/simpleparallax.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/static/js/waypoints.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/templates/mall/mall_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall/templates/mall/mall_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presite/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/presite/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/presite/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/presite/urls.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -98,7 +33,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/views.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="437">
@@ -109,6 +44,15 @@
                 <element signature="e#949#5905#0" />
                 <element signature="e#8610#8744#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="114">
+              <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
             </state>
           </provider>
         </entry>
@@ -192,7 +136,6 @@
       <list>
         <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
         <option value="$PROJECT_DIR$/mall/static/css/honeycomms.css" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/.ebextensions/django.config" />
         <option value="$PROJECT_DIR$/../honeycomms-eb/ebdjango/.ebextensions/django.config" />
         <option value="$PROJECT_DIR$/presite/settings.py" />
@@ -202,6 +145,7 @@
         <option value="$PROJECT_DIR$/mall/models.py" />
         <option value="$PROJECT_DIR$/mall/admin.py" />
         <option value="$PROJECT_DIR$/mall/views.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -317,7 +261,6 @@
     <entry file="file://$PROJECT_DIR$/mall/apps.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore" />
     <entry file="file://$PROJECT_DIR$/mall/static/css/honeycomms.css" />
     <entry file="file://$PROJECT_DIR$/.ebextensions/django.config">
       <provider selected="true" editor-type-id="text-editor">
@@ -408,6 +351,13 @@
             <element signature="e#949#5905#0" />
             <element signature="e#8610#8744#0" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
         </state>
       </provider>
     </entry>
