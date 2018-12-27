@@ -22,7 +22,6 @@ def mall_product_list(request):
     print("end   : ", datetime.now())
     return render(request, 'mall/mall_main.html', {'products': products, 'product_colors': product_colors})
 
-
 # 슬러그 init/으로 접속했을 때 KTshop 업데이트 내용을 새롭게 반영하여 KT Direct 메인화면 출력 (관리자용)
 def mall_product_list_init(request):
     item_name = {}
@@ -131,7 +130,7 @@ def mall_product_list_init(request):
 
     print("2nd loop end   : ", datetime.now())
 
-    image_save(item_name, thumbs_link)
+    product_image_save(item_name, thumbs_link)
 
     print("img save end   : ", datetime.now())
 
@@ -145,15 +144,25 @@ def mall_product_list_init(request):
 def ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_code_idx):
     return ktshop_url[:device_code_idx] + device_code + ktshop_url[device_code_idx:vndr_code_idx] + vndr_code + ktshop_url[vndr_code_idx:]
 
-def image_save(image_name_list, image_url_list):
+
+# Product 이미지 이름 리스트와 URL 리스트를 받아서 이미지 파일을 저장하는 함수
+# 해당 product의 이미지가 이미 존재하는 경우에는 bypass
+def product_image_save(image_name_list, image_url_list):
+    existing_image_names_list = os.listdir("media/device_images")
+
     for idx in range(len(image_name_list)):
-        #temp_image = urlretrieve(image_url_list[idx])
-        #temp_image = urlopen(image_url_list[idx]).read()
-        temp_image = requests.get(image_url_list[idx])
-        temp_image_file = NamedTemporaryFile(delete=True)
-        temp_image_file.write(temp_image.content)
-        temp_image_file.flush()
         temp_product = Product.objects.get(device_name=image_name_list[idx])
-        temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
-        temp_product.on_sale = True
-        temp_product.save()
+        temp_image_file_name = (temp_product.device_image_file.name).split("/")[1]
+
+        if temp_image_file_name in existing_image_names_list:
+            print("{} already exists.".format(image_name_list[idx]))
+            continue
+        else:
+            temp_image = requests.get(image_url_list[idx])
+            temp_image_file = NamedTemporaryFile(delete=True)
+            temp_image_file.write(temp_image.content)
+            temp_image_file.flush()
+            temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
+            print("{} is just saved.".format(temp_product.device_image_file))
+            temp_product.on_sale = True
+            temp_product.save()
