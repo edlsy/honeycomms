@@ -1,9 +1,10 @@
 from django.shortcuts import render
-#from urllib.request import urlopen
+from urllib.request import urlopen
 from urllib.request import urlretrieve
 from datetime import datetime
 from bs4 import BeautifulSoup
 from django.core.files import File
+from tempfile import NamedTemporaryFile
 import os
 import requests
 from time import sleep
@@ -30,6 +31,8 @@ def mall_product_list_init(request):
     thumbs_link = {}
     color_name = {}
     color_code = {}
+    image_name = {}
+    ktshop_link = {}
     ktshop_url = "https://shop.kt.com/smart/productView.do?prodNo=&vndrNo=&supportType=02"
     vndr_code = "AA01344"   # 허니컴즈 대리점코드
 
@@ -93,12 +96,15 @@ def mall_product_list_init(request):
             temp_product_color.on_sale = True
             temp_product_color.save()
 
-        temp_ktshop_link = ktshop_device_url(ktshop_url, item_code[idx], 48, vndr_code, 56)
+        ktshop_link[idx] = ktshop_device_url(ktshop_url, item_code[idx], 48, vndr_code, 56)
+        image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
         # KTshop의 단말이미지를 temp_image로 가져오고, 이름을 기종+temp_image 확장자로 구성된 temp_image_name으로 설정한다
+        '''
         temp_image = urlretrieve(thumbs_link[idx])
-        temp_image_name = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
-        print("{} is saved.".format(temp_image_name))
+        image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
+        print("{} is saved.".format(image_name[idx]))
         sleep(1)
+        '''
 
         # Product 테이블에 현재의 기종명 레코드가 없으면 새로운 레코드 저장 후 on_sale=True
         if len(Product.objects.filter(device_name=item_name[idx])) == 0:
@@ -106,7 +112,7 @@ def mall_product_list_init(request):
                 device_name=item_name[idx],
                 device_price=item_price[idx],
                 device_code=item_code[idx],
-                ktshop_link=temp_ktshop_link,
+                ktshop_link=ktshop_link[idx],
                 device_image_url=thumbs_link[idx],
                 on_sale=True
             ).save()
@@ -117,13 +123,17 @@ def mall_product_list_init(request):
             temp_product = Product.objects.get(device_name=item_name[idx])
             temp_product.device_price = item_price[idx]
             temp_product.device_code = item_code[idx]
-            temp_product.ktshop_link = temp_ktshop_link
+            temp_product.ktshop_link = ktshop_link[idx]
             temp_product.device_image_url = thumbs_link[idx]
-            temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
+            #temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
             temp_product.on_sale = True
             temp_product.save()
 
     print("2nd loop end   : ", datetime.now())
+
+    image_save(item_name, thumbs_link)
+
+    print("img save end   : ", datetime.now())
 
     products = Product.objects.filter(on_sale=True)
     product_colors = Product_Color.objects.filter(on_sale=True)
@@ -134,3 +144,16 @@ def mall_product_list_init(request):
 # 파라미터를 조합하여 해당 단말의 KTshop URL 리턴
 def ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_code_idx):
     return ktshop_url[:device_code_idx] + device_code + ktshop_url[device_code_idx:vndr_code_idx] + vndr_code + ktshop_url[vndr_code_idx:]
+
+def image_save(image_name_list, image_url_list):
+    for idx in range(len(image_name_list)):
+        #temp_image = urlretrieve(image_url_list[idx])
+        #temp_image = urlopen(image_url_list[idx]).read()
+        temp_image = requests.get(image_url_list[idx])
+        temp_image_file = NamedTemporaryFile(delete=True)
+        temp_image_file.write(temp_image.content)
+        temp_image_file.flush()
+        temp_product = Product.objects.get(device_name=image_name_list[idx])
+        temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
+        temp_product.on_sale = True
+        temp_product.save()
