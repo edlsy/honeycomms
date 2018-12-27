@@ -97,7 +97,6 @@ def mall_product_list_init(request):
 
         ktshop_link[idx] = ktshop_device_url(ktshop_url, item_code[idx], 48, vndr_code, 56)
         image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
-        # KTshop의 단말이미지를 temp_image로 가져오고, 이름을 기종+temp_image 확장자로 구성된 temp_image_name으로 설정한다
         '''
         temp_image = urlretrieve(thumbs_link[idx])
         image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
@@ -115,8 +114,8 @@ def mall_product_list_init(request):
                 device_image_url=thumbs_link[idx],
                 on_sale=True
             ).save()
-            temp_product = Product.objects.get(device_name=item_name[idx])
-            temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
+            #temp_product = Product.objects.get(device_name=item_name[idx])
+            #temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
         # Product 테이블에 현재의 기종명 레코드가 있으면 해당 레코드에 KTshop 크롤링값을 업데이트 후 on_sale=True
         else:
             temp_product = Product.objects.get(device_name=item_name[idx])
