@@ -130,7 +130,7 @@ def mall_product_list_init(request):
 
     print("2nd loop end   : ", datetime.now())
 
-    product_image_save(item_name, thumbs_link)
+    product_image_save(item_name, image_name, thumbs_link)
 
     print("img save end   : ", datetime.now())
 
@@ -147,22 +147,29 @@ def ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_
 
 # Product 이미지 이름 리스트와 URL 리스트를 받아서 이미지 파일을 저장하는 함수
 # 해당 product의 이미지가 이미 존재하는 경우에는 bypass
-def product_image_save(image_name_list, image_url_list):
+def product_image_save(item_name_list, image_name_list, image_url_list):
     existing_image_names_list = os.listdir(os.path.join(BASE_DIR,"media","device_images"))
 
     for idx in range(len(image_name_list)):
-        temp_product = Product.objects.get(device_name=image_name_list[idx])
+        print("index = {}".format(idx))
+        temp_product = Product.objects.get(device_name=item_name_list[idx])
         temp_image_file_name = (temp_product.device_image_file.name).split("/")[1]
 
         if temp_image_file_name in existing_image_names_list:
             print("{} already exists.".format(image_name_list[idx]))
             continue
         else:
-            temp_image = requests.get(image_url_list[idx])
-            temp_image_file = NamedTemporaryFile(delete=True)
-            temp_image_file.write(temp_image.content)
-            temp_image_file.flush()
-            temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
-            print("{} is just saved.".format(temp_product.device_image_file))
-            temp_product.on_sale = True
-            temp_product.save()
+            try:
+                temp_image = requests.get(image_url_list[idx])
+                temp_image_file = NamedTemporaryFile(delete=True)
+                temp_image_file.write(temp_image.content)
+                temp_image_file.flush()
+                temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
+                print("{} is just saved.".format(temp_product.device_image_file))
+                temp_product.on_sale = True
+                temp_product.save()
+            except ConnectionError:
+                print("ConnectionError occurred. Retry~!!")
+                idx-=1
+                print("[retry] index = {}".format(idx))
+                continue

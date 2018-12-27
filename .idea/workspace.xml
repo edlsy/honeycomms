@@ -2,8 +2,29 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5065a7e-30de-4e41-8387-a84a14fb614f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/G7_ThinQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/G7_ThinQ_3enXSM0.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/LG_V30.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/LG_V40_ThinQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X4.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X5.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X500.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/V35_ThinQ.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_X.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A72018.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A8_.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_J7_2017.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_Jean.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_On7_Prime.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_S9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_S9_9kvadPA.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_노트9.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시노트8.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/device_images/샤오미_포코폰_F1.png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -38,8 +59,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="123">
-              <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+            <state relative-caret-position="730">
+              <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -789,8 +810,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="123">
-          <caret line="18" column="19" selection-start-line="18" selection-start-column="19" selection-end-line="18" selection-end-column="19" />
+        <state relative-caret-position="730">
+          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
