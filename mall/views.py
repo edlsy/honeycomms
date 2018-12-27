@@ -16,6 +16,7 @@ ktshop_site_url = "https://m.shop.kt.com:444/m/smart/agncyInfoView.do?vndrNo=AA0
 
 # 슬러그없이 접속했을 때 기존 저장된 DB를 기반으로 KT Direct 메인화면 출력 (고객용)
 def mall_product_list(request):
+    print(BASE_DIR)
     print("start : ", datetime.now())
     products = Product.objects.filter(on_sale=True)
     product_colors = Product_Color.objects.filter(on_sale=True)
@@ -147,7 +148,7 @@ def ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_
 # Product 이미지 이름 리스트와 URL 리스트를 받아서 이미지 파일을 저장하는 함수
 # 해당 product의 이미지가 이미 존재하는 경우에는 bypass
 def product_image_save(image_name_list, image_url_list):
-    existing_image_names_list = os.listdir("media/device_images")
+    existing_image_names_list = os.listdir(os.path.join(BASE_DIR,"media","device_images"))
 
     for idx in range(len(image_name_list)):
         temp_product = Product.objects.get(device_name=image_name_list[idx])
