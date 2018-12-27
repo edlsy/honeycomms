@@ -35,45 +35,76 @@
 
         <div class="container-fluid">
             <!-- nav bar 부분 -->
-            <div class="container">
-                <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
-                    <div class="container">
-                        <img id="logo" src="{% static 'imgs/logo.png' %}" alt="KT Direct">
-                        <!-- Brand and toggle get grouped for better mobile display -->
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                                <span class="sr-only">Toggle navigation</span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                                <span class="icon-bar"></span>
-                            </button>
-
-                        </div>
-
-                        <!-- Collect the nav links, forms, and other content for toggling -->
-                        <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#">메뉴#1</a></li>
-                                <li><a href="#">메뉴#2</a></li>
-                                <li><a href="#">메뉴#3</a></li>
-                            </ul>
-                        </div><!-- /.navbar-collapse -->
+            <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar-scroll">
+                <div class="container">
+                    <img id="logo" src="{% static 'imgs/logo.gif' %}" alt="KT Direct">
+                    <!-- Brand and toggle get grouped for better mobile display -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
                     </div>
-                </nav>
-                <!-- // nav bar 부분 끝 -->
+
+                    <!-- Collect the nav links, forms, and other content for toggling -->
+                    <div class="collapse navbar-collapse navbar-right navbar-ex1-collapse">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">메뉴#1</a></li>
+                            <li><a href="#">메뉴#2</a></li>
+                            <li><a href="#">메뉴#3</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.navbar-collapse -->
+                </div>
+            </nav>
+            <!-- // nav bar 부분 끝 -->
+
+            <!-- 메인영역 시작  -->
+            <div class="container">
+                <!-- 배너리스트 시작  -->
+                <div class="banner-block hidden-xs">
+                    <div id="main-banner-carousel" class="carousel slide">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#main-banner-carousel" data-slide-to="0" class="active"></li>
+                            <li data-target="#main-banner-carousel" data-slide-to="1"></li>
+                        </ol>
+                        <!-- Carousel items -->
+                        <div class="carousel-inner" role="listbox">
+                            <div class="item active">
+                               <img src="{% static 'imgs/banner1_980x360.jpg' %}" alt="First slide">
+                            </div>
+                            <div class="item">
+                               <img src="{% static 'imgs/banner2_980x360.jpg' %}" alt="Second slide">
+                            </div>
+                        </div>
+                        <!-- Controls -->
+                        <a class="left carousel-control" href="#main-banner-carousel" role="button" data-slide="prev">
+                            <span class="icon-prev"></span>
+                        </a>
+                        <a class="right carousel-control" href="#main-banner-carousel" role="button" data-slide="next">
+                            <span class="icon-next"></span>
+                        </a>
+                    </div>
+                </div>
+                <!--// 배너리스트 끝  -->
 
                 <!--// 상품리스트 시작  -->
-                <div class="row">
-                    {% block content %}
-                    {% endblock %}
+                <div class="product-block">
+                    <div>
+                        {% block content %}
+                        {% endblock %}
+                    </div>
                 </div>
-                <!--// 상품리스트 끝  -->
+                <!-- 상품리스트 끝  -->
             </div>
-            <!--// container 끝  -->
+            <!-- 메인영역 끝  -->
 
-            <footer class="content3">
+            <footer>
                 <div class="container">
-                    <div class="footer-menu footer-text">
+                    <div class="footer-menu">
                         <a href="/customer/terms_of_use/">이용약관</a>&nbsp;&nbsp;&nbsp;
                         <a href="/customer/privacy_policy/">개인정보처리방침</a>&nbsp;&nbsp;&nbsp;
                         <a id="email_refuse" style="cursor:pointer">이메일무단수집 거부</a>&nbsp;&nbsp;&nbsp;
@@ -88,12 +119,23 @@
                         주소 : 서울특별시 성동구 성수이로22길 37 아크밸리 1106호<br>
                         고객센터 : 1522-0689 / 평일 10시~18시<br><br>
                     </div>
-                    <img src="{% static '/img/footer_security(lets_encrypt).png' %}" class="bs_footer_security_img">
+                    <img src="{% static '/imgs/footer_security(lets_encrypt).png' %}" class="bs_footer_security_img">
                 </div>
             </footer>
 
         </div>
         <!--// container-fluid 끝  -->
 
+        <script>
+            $('.carousel').carousel({
+                interval: 3000;
+                pause: hover;
+                wrap: true;
+                keyboard: true;
+            })
+        </script>
+
     </body>
+
+
 </html>

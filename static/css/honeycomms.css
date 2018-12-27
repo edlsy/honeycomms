@@ -5,6 +5,10 @@ ul, ol {
     padding-inline-start: 0px;
 }
 
+a:link, a:visited, a:active, a:hover {
+    text-decoration: none;
+}
+
 /* 나눔바른고딕 설정 */
 @font-face{
     font-family:'NanumBarunGothic';
@@ -25,6 +29,24 @@ body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
     margin: 0 auto;
     position: relative;
     max-width: 980px;
+}
+
+.banner-block {
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+}
+
+.product-block {
+    display: flex;
+    justify-content: center;
+    max-width: 980px;
+    text-align: left;
+    width: 100%;
+    margin: 50px 0;
 }
 
 /* navbar에 대한 설정 */
@@ -54,7 +76,12 @@ body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
 }
 
 /* 메뉴 위치 선정 */
-.navbar-nav { padding-right: 10px; margin-top: 0px; background-color: #eee; }
+.navbar-nav {
+    position: absolute;
+    padding-right: 10px;
+    right: 0px;
+    margin-top: 10px;
+}
 
 /* 메뉴 텍스트 부분 설정 */
 .navbar-default .navbar-nav li { margin: 0 20px; }
@@ -70,8 +97,11 @@ body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
 .navbar-default .navbar-nav>li>a:hover { color: #FF8000; }
 
 #logo {
+    position: relative;
+    top: 0px;
+    left: 0px;
     height: 50px;
-    margin: 10px auto;
+    margin: 10px;
     padding: 0px;
 }
 
@@ -83,7 +113,13 @@ body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
 /* 상품영역 전체 */
 .row {
     border: 0px #ccc solid;
-    margin: 50px 0;
+    margin: 0;
+}
+
+img.main-banner {
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 /* 기기사진 + Info 영역 Outer*/
@@ -183,6 +219,10 @@ footer {
     margin-bottom: 10px;
     padding-bottom: 8px;
     border-bottom: 1px solid #aaa;
+    font-size: 15px;
+    font-weight: 200;
+    color: #fff;
+    text-align: left;
 }
 
 .footer-text {
@@ -192,7 +232,7 @@ footer {
     color: #aaa;
 }
 
-.content3 {
+.content33 {
     background-color: #333;
     font-size: 15px;
     font-weight: 200;
@@ -203,8 +243,8 @@ footer {
     position: absolute;
     top: 50px;
     right: 0px;
-    width: 240px;
-    height: 80px;
+    width: 240x;
+    height: 120px;
     margin: 5px 0px 0px 0px;
 }
 
@@ -218,7 +258,7 @@ footer {
 @media (max-width: 767px) {
     .container {
         padding: 0;
-        margin: 0;
+        margin: 0 10px;
         position: relative;
         width: 100%;
     }
