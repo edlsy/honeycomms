@@ -239,13 +239,23 @@ footer {
     color: #aaa;
 }
 
-.bs_footer_security_img {
+#footer_security_img {
+    position: absolute;
+    top: 50px;
+    right: 150px;
+    width: 120x;
+    height: 120px;
+    margin: 0px 0px 0px 0px;
+}
+
+#kt_cert_img {
     position: absolute;
     top: 50px;
     right: 0px;
-    width: 240x;
+    width: 120x;
     height: 120px;
-    margin: 5px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
 }
 
 /* IE10+ CSS styles go here */

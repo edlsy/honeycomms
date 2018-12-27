@@ -2,29 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5065a7e-30de-4e41-8387-a84a14fb614f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/mall/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/G7_ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/G7_ThinQ_3enXSM0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/LG_V30.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/LG_V40_ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/LG_X500.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/V35_ThinQ.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/iPhone_X.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A72018.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_A8_.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_J7_2017.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_Jean.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_On7_Prime.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_S9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_S9_9kvadPA.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시_노트9.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/갤럭시노트8.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/device_images/샤오미_포코폰_F1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall/templates/mall/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall/templates/mall/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/css/honeycomms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/honeycomms.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/imgs/footer_security(lets_encrypt).png" beforeDir="false" afterPath="$PROJECT_DIR$/static/imgs/footer_security(lets_encrypt).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/imgs/ponitto(footer).png" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -56,10 +37,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="730">
+            <state relative-caret-position="694">
               <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
@@ -101,11 +82,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="honeycomms.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="honeycomms.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+            <state relative-caret-position="570">
+              <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -126,8 +107,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2448">
-              <caret line="136" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="402">
+              <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
               <folding>
                 <element signature="e#4997#5003#0" expanded="true" />
                 <element signature="e#5003#5009#0" expanded="true" />
@@ -173,6 +154,7 @@
       <find>row</find>
       <find>ktshop_device_url</find>
       <find>start</find>
+      <find>bs_</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -191,9 +173,9 @@
         <option value="$PROJECT_DIR$/mall/admin.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mall/templates/mall/mall_main.html" />
-        <option value="$PROJECT_DIR$/static/css/honeycomms.css" />
-        <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
         <option value="$PROJECT_DIR$/mall/views.py" />
+        <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
+        <option value="$PROJECT_DIR$/static/css/honeycomms.css" />
       </list>
     </option>
   </component>
@@ -769,13 +751,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/자료/책/부트스트랩으로 디자인하라/ch04/carousel.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1026">
@@ -783,10 +758,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/mall/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="694">
+          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2448">
-          <caret line="136" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="402">
+          <caret line="113" column="56" selection-start-line="113" selection-start-column="56" selection-end-line="113" selection-end-column="56" />
           <folding>
             <element signature="e#4997#5003#0" expanded="true" />
             <element signature="e#5003#5009#0" expanded="true" />
@@ -808,13 +793,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall/views.py">
+    <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="730">
-          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
-          <folding>
-            <element signature="e#0#35#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="570">
+          <caret line="257" column="20" selection-start-line="257" selection-start-column="20" selection-end-line="257" selection-end-column="20" />
         </state>
       </provider>
     </entry>
