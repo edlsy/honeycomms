@@ -1,11 +1,12 @@
 from django.shortcuts import render
-from urllib.request import urlopen
+#from urllib.request import urlopen
 from urllib.request import urlretrieve
 from datetime import datetime
 from bs4 import BeautifulSoup
 from django.core.files import File
 import os
 import requests
+from time import sleep
 from .models import Product, Product_Color
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -32,8 +33,8 @@ def mall_product_list_init(request):
     ktshop_url = "https://shop.kt.com/smart/productView.do?prodNo=&vndrNo=&supportType=02"
     vndr_code = "AA01344"   # 허니컴즈 대리점코드
 
-    html = urlopen(ktshop_site_url)
-    bsObj = BeautifulSoup(html, "html.parser")
+    html = requests.get(ktshop_site_url)
+    bsObj = BeautifulSoup(html.text, "html.parser")
     thumbs_blocks = bsObj.findAll("div", {"class": "thumbs"})
     prodInfo_blocks = bsObj.findAll("div", {"class": "prodInfo"})
 
@@ -96,6 +97,8 @@ def mall_product_list_init(request):
         # KTshop의 단말이미지를 temp_image로 가져오고, 이름을 기종+temp_image 확장자로 구성된 temp_image_name으로 설정한다
         temp_image = urlretrieve(thumbs_link[idx])
         temp_image_name = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
+        print("{} is saved.".format(temp_image_name))
+        sleep(1)
 
         # Product 테이블에 현재의 기종명 레코드가 없으면 새로운 레코드 저장 후 on_sale=True
         if len(Product.objects.filter(device_name=item_name[idx])) == 0:

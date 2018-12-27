@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a5065a7e-30de-4e41-8387-a84a14fb614f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/templates/mall/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall/templates/mall/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mall/templates/mall/mall_main.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall/templates/mall/mall_main.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/honeycomms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/honeycomms.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/imgs/footer_security(lets_encrypt).png" beforeDir="false" afterPath="$PROJECT_DIR$/static/imgs/footer_security(lets_encrypt).png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/views.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -20,7 +17,7 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
+            <state relative-caret-position="72">
               <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
@@ -38,11 +35,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2232">
-              <caret line="132" column="138" selection-start-line="132" selection-start-column="138" selection-end-line="132" selection-end-column="138" />
+            <state relative-caret-position="305">
+              <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+              <folding>
+                <element signature="e#0#35#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -83,7 +83,7 @@
       <file leaf-file-name="honeycomms.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
+            <state relative-caret-position="864">
               <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
             </state>
           </provider>
@@ -102,12 +102,27 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="base.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="820">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+            <state relative-caret-position="817">
+              <caret line="136" selection-start-line="136" selection-end-line="136" />
               <folding>
+                <element signature="e#4997#5003#0" expanded="true" />
+                <element signature="e#5003#5009#0" expanded="true" />
+                <element signature="e#5009#5015#0" expanded="true" />
+                <element signature="e#5088#5094#0" expanded="true" />
+                <element signature="e#5094#5100#0" expanded="true" />
+                <element signature="e#5100#5106#0" expanded="true" />
+                <element signature="e#5189#5195#0" expanded="true" />
+                <element signature="e#5195#5201#0" expanded="true" />
+                <element signature="e#5201#5207#0" expanded="true" />
+                <element signature="e#5303#5309#0" expanded="true" />
+                <element signature="e#5309#5315#0" expanded="true" />
+                <element signature="e#5315#5321#0" expanded="true" />
+                <element signature="e#5439#5445#0" expanded="true" />
+                <element signature="e#5445#5451#0" expanded="true" />
+                <element signature="e#5451#5457#0" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
               </folding>
             </state>
@@ -117,8 +132,8 @@
       <file leaf-file-name="carousel.html" pinned="false" current-in-tab="false">
         <entry file="file://D:/자료/책/부트스트랩으로 디자인하라/ch04/carousel.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="712">
-              <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="13" />
+            <state relative-caret-position="1026">
+              <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -151,11 +166,11 @@
         <option value="$PROJECT_DIR$/mall/urls.py" />
         <option value="$PROJECT_DIR$/mall/models.py" />
         <option value="$PROJECT_DIR$/mall/admin.py" />
-        <option value="$PROJECT_DIR$/mall/views.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mall/templates/mall/mall_main.html" />
         <option value="$PROJECT_DIR$/static/css/honeycomms.css" />
         <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
+        <option value="$PROJECT_DIR$/mall/views.py" />
       </list>
     </option>
   </component>
@@ -169,7 +184,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -202,6 +216,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -234,6 +249,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1280" height="1040" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33413848" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -256,27 +272,131 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/mall/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2232">
+          <caret line="132" column="138" selection-start-line="132" selection-start-column="138" selection-end-line="132" selection-end-column="138" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presite/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
+          <folding>
+            <element signature="e#0#37#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/presite/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2322">
+          <caret line="129" column="44" selection-start-line="129" selection-start-column="44" selection-end-line="129" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+          <folding>
+            <element signature="e#0#28#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="864">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/templates/mall/mall_main.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="4" column="54" selection-start-line="4" selection-start-column="54" selection-end-line="4" selection-end-column="54" />
+          <folding>
+            <element signature="n#style#0;n#span#0;n#li#0;n#ul#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#a#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://D:/자료/책/부트스트랩으로 디자인하라/ch04/carousel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1026">
+          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2448">
+          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+          <folding>
+            <element signature="e#4997#5003#0" expanded="true" />
+            <element signature="e#5003#5009#0" expanded="true" />
+            <element signature="e#5009#5015#0" expanded="true" />
+            <element signature="e#5088#5094#0" expanded="true" />
+            <element signature="e#5094#5100#0" expanded="true" />
+            <element signature="e#5100#5106#0" expanded="true" />
+            <element signature="e#5189#5195#0" expanded="true" />
+            <element signature="e#5195#5201#0" expanded="true" />
+            <element signature="e#5201#5207#0" expanded="true" />
+            <element signature="e#5303#5309#0" expanded="true" />
+            <element signature="e#5309#5315#0" expanded="true" />
+            <element signature="e#5315#5321#0" expanded="true" />
+            <element signature="e#5439#5445#0" expanded="true" />
+            <element signature="e#5445#5451#0" expanded="true" />
+            <element signature="e#5451#5457#0" expanded="true" />
+            <element signature="n#style#0;n#img#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall/admin.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
@@ -344,6 +464,21 @@
         <state relative-caret-position="1620">
           <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
           <folding>
+            <element signature="e#4997#5003#0" expanded="true" />
+            <element signature="e#5003#5009#0" expanded="true" />
+            <element signature="e#5009#5015#0" expanded="true" />
+            <element signature="e#5088#5094#0" expanded="true" />
+            <element signature="e#5094#5100#0" expanded="true" />
+            <element signature="e#5100#5106#0" expanded="true" />
+            <element signature="e#5189#5195#0" expanded="true" />
+            <element signature="e#5195#5201#0" expanded="true" />
+            <element signature="e#5201#5207#0" expanded="true" />
+            <element signature="e#5303#5309#0" expanded="true" />
+            <element signature="e#5309#5315#0" expanded="true" />
+            <element signature="e#5315#5321#0" expanded="true" />
+            <element signature="e#5439#5445#0" expanded="true" />
+            <element signature="e#5445#5451#0" expanded="true" />
+            <element signature="e#5451#5457#0" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -398,6 +533,21 @@
         <state relative-caret-position="504">
           <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
           <folding>
+            <element signature="e#4997#5003#0" expanded="true" />
+            <element signature="e#5003#5009#0" expanded="true" />
+            <element signature="e#5009#5015#0" expanded="true" />
+            <element signature="e#5088#5094#0" expanded="true" />
+            <element signature="e#5094#5100#0" expanded="true" />
+            <element signature="e#5100#5106#0" expanded="true" />
+            <element signature="e#5189#5195#0" expanded="true" />
+            <element signature="e#5195#5201#0" expanded="true" />
+            <element signature="e#5201#5207#0" expanded="true" />
+            <element signature="e#5303#5309#0" expanded="true" />
+            <element signature="e#5309#5315#0" expanded="true" />
+            <element signature="e#5315#5321#0" expanded="true" />
+            <element signature="e#5439#5445#0" expanded="true" />
+            <element signature="e#5445#5451#0" expanded="true" />
+            <element signature="e#5451#5457#0" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
         </state>
@@ -466,7 +616,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/admin.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
+        <state relative-caret-position="72">
           <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
@@ -478,13 +628,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="114">
           <caret line="6" column="9" selection-start-line="6" selection-start-column="9" selection-end-line="6" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2232">
-          <caret line="132" column="138" selection-start-line="132" selection-start-column="138" selection-end-line="132" selection-end-column="138" />
         </state>
       </provider>
     </entry>
@@ -501,24 +644,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
+        <state relative-caret-position="864">
           <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://D:/자료/책/부트스트랩으로 디자인하라/ch04/carousel.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="712">
-          <caret line="57" column="4" lean-forward="true" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="13" />
+        <state relative-caret-position="1026">
+          <caret line="57" column="4" selection-start-line="57" selection-start-column="4" selection-end-line="59" selection-end-column="13" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="820">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="817">
+          <caret line="136" selection-start-line="136" selection-end-line="136" />
           <folding>
+            <element signature="e#4997#5003#0" expanded="true" />
+            <element signature="e#5003#5009#0" expanded="true" />
+            <element signature="e#5009#5015#0" expanded="true" />
+            <element signature="e#5088#5094#0" expanded="true" />
+            <element signature="e#5094#5100#0" expanded="true" />
+            <element signature="e#5100#5106#0" expanded="true" />
+            <element signature="e#5189#5195#0" expanded="true" />
+            <element signature="e#5195#5201#0" expanded="true" />
+            <element signature="e#5201#5207#0" expanded="true" />
+            <element signature="e#5303#5309#0" expanded="true" />
+            <element signature="e#5309#5315#0" expanded="true" />
+            <element signature="e#5315#5321#0" expanded="true" />
+            <element signature="e#5439#5445#0" expanded="true" />
+            <element signature="e#5445#5451#0" expanded="true" />
+            <element signature="e#5451#5457#0" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#footer#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="305">
+          <caret line="99" column="27" selection-start-line="99" selection-start-column="27" selection-end-line="99" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
