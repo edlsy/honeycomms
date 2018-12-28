@@ -8,7 +8,7 @@ from tempfile import NamedTemporaryFile
 import os
 import requests
 from time import sleep
-from .models import Product, Product_Color
+from .models import Product, Product_Color, Customer
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ktshop_site_url = "https://m.shop.kt.com:444/m/smart/agncyInfoView.do?vndrNo=AA01344&sortProd=SALE"

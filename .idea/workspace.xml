@@ -3,7 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5065a7e-30de-4e41-8387-a84a14fb614f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/admin.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/mall/templates/mall/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/mall/templates/mall/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mall/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/mall/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/css/honeycomms.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/honeycomms.css" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +21,8 @@
       <file leaf-file-name="admin.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/admin.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
+            <state relative-caret-position="306">
+              <caret line="17" selection-start-line="17" selection-end-line="17" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -27,11 +30,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="models.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/mall/models.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
+            <state relative-caret-position="702">
+              <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -39,8 +42,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2934">
-              <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+            <state relative-caret-position="180">
+              <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
               <folding>
                 <element signature="e#0#35#0" expanded="true" />
               </folding>
@@ -51,11 +54,8 @@
       <file leaf-file-name="urls.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/presite/urls.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-              <folding>
-                <element signature="e#0#37#0" expanded="true" />
-              </folding>
+            <state>
+              <caret column="31" selection-start-column="24" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -81,11 +81,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="honeycomms.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="honeycomms.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="702">
-              <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+            <state relative-caret-position="540">
+              <caret line="240" column="31" selection-start-line="240" selection-start-column="31" selection-end-line="240" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -106,25 +106,8 @@
       <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="432">
-              <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-              <folding>
-                <element signature="e#4997#5003#0" expanded="true" />
-                <element signature="e#5003#5009#0" expanded="true" />
-                <element signature="e#5009#5015#0" expanded="true" />
-                <element signature="e#5088#5094#0" expanded="true" />
-                <element signature="e#5094#5100#0" expanded="true" />
-                <element signature="e#5100#5106#0" expanded="true" />
-                <element signature="e#5189#5195#0" expanded="true" />
-                <element signature="e#5195#5201#0" expanded="true" />
-                <element signature="e#5201#5207#0" expanded="true" />
-                <element signature="e#5303#5309#0" expanded="true" />
-                <element signature="e#5309#5315#0" expanded="true" />
-                <element signature="e#5315#5321#0" expanded="true" />
-                <element signature="e#5439#5445#0" expanded="true" />
-                <element signature="e#5445#5451#0" expanded="true" />
-                <element signature="e#5451#5457#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="364">
+              <caret line="119" column="118" selection-start-line="119" selection-start-column="118" selection-end-line="119" selection-end-column="118" />
             </state>
           </provider>
         </entry>
@@ -167,13 +150,13 @@
         <option value="$PROJECT_DIR$/presite/settings.py" />
         <option value="$PROJECT_DIR$/presite/urls.py" />
         <option value="$PROJECT_DIR$/mall/urls.py" />
-        <option value="$PROJECT_DIR$/mall/models.py" />
-        <option value="$PROJECT_DIR$/mall/admin.py" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/mall/templates/mall/mall_main.html" />
-        <option value="$PROJECT_DIR$/mall/views.py" />
-        <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
         <option value="$PROJECT_DIR$/static/css/honeycomms.css" />
+        <option value="$PROJECT_DIR$/mall/templates/mall/base.html" />
+        <option value="$PROJECT_DIR$/mall/admin.py" />
+        <option value="$PROJECT_DIR$/mall/views.py" />
+        <option value="$PROJECT_DIR$/mall/models.py" />
       </list>
     </option>
   </component>
@@ -187,7 +170,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -220,6 +202,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -275,21 +258,21 @@
     <layout-to-restore>
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24973656" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Version Control" order="9" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -324,9 +307,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -369,23 +349,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2448">
           <caret line="136" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#4997#5003#0" expanded="true" />
-            <element signature="e#5003#5009#0" expanded="true" />
-            <element signature="e#5009#5015#0" expanded="true" />
-            <element signature="e#5088#5094#0" expanded="true" />
-            <element signature="e#5094#5100#0" expanded="true" />
-            <element signature="e#5100#5106#0" expanded="true" />
-            <element signature="e#5189#5195#0" expanded="true" />
-            <element signature="e#5195#5201#0" expanded="true" />
-            <element signature="e#5201#5207#0" expanded="true" />
-            <element signature="e#5303#5309#0" expanded="true" />
-            <element signature="e#5309#5315#0" expanded="true" />
-            <element signature="e#5315#5321#0" expanded="true" />
-            <element signature="e#5439#5445#0" expanded="true" />
-            <element signature="e#5445#5451#0" expanded="true" />
-            <element signature="e#5451#5457#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -437,9 +400,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -489,23 +449,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2448">
           <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-          <folding>
-            <element signature="e#4997#5003#0" expanded="true" />
-            <element signature="e#5003#5009#0" expanded="true" />
-            <element signature="e#5009#5015#0" expanded="true" />
-            <element signature="e#5088#5094#0" expanded="true" />
-            <element signature="e#5094#5100#0" expanded="true" />
-            <element signature="e#5100#5106#0" expanded="true" />
-            <element signature="e#5189#5195#0" expanded="true" />
-            <element signature="e#5195#5201#0" expanded="true" />
-            <element signature="e#5201#5207#0" expanded="true" />
-            <element signature="e#5303#5309#0" expanded="true" />
-            <element signature="e#5309#5315#0" expanded="true" />
-            <element signature="e#5315#5321#0" expanded="true" />
-            <element signature="e#5439#5445#0" expanded="true" />
-            <element signature="e#5445#5451#0" expanded="true" />
-            <element signature="e#5451#5457#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -537,9 +480,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="144">
           <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -575,23 +515,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1620">
           <caret line="90" column="46" selection-start-line="90" selection-start-column="46" selection-end-line="90" selection-end-column="46" />
-          <folding>
-            <element signature="e#4997#5003#0" expanded="true" />
-            <element signature="e#5003#5009#0" expanded="true" />
-            <element signature="e#5009#5015#0" expanded="true" />
-            <element signature="e#5088#5094#0" expanded="true" />
-            <element signature="e#5094#5100#0" expanded="true" />
-            <element signature="e#5100#5106#0" expanded="true" />
-            <element signature="e#5189#5195#0" expanded="true" />
-            <element signature="e#5195#5201#0" expanded="true" />
-            <element signature="e#5201#5207#0" expanded="true" />
-            <element signature="e#5303#5309#0" expanded="true" />
-            <element signature="e#5309#5315#0" expanded="true" />
-            <element signature="e#5315#5321#0" expanded="true" />
-            <element signature="e#5439#5445#0" expanded="true" />
-            <element signature="e#5445#5451#0" expanded="true" />
-            <element signature="e#5451#5457#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -616,9 +539,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="1" lean-forward="true" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -643,23 +563,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="504">
           <caret line="28" column="74" selection-start-line="28" selection-start-column="74" selection-end-line="28" selection-end-column="74" />
-          <folding>
-            <element signature="e#4997#5003#0" expanded="true" />
-            <element signature="e#5003#5009#0" expanded="true" />
-            <element signature="e#5009#5015#0" expanded="true" />
-            <element signature="e#5088#5094#0" expanded="true" />
-            <element signature="e#5094#5100#0" expanded="true" />
-            <element signature="e#5100#5106#0" expanded="true" />
-            <element signature="e#5189#5195#0" expanded="true" />
-            <element signature="e#5195#5201#0" expanded="true" />
-            <element signature="e#5201#5207#0" expanded="true" />
-            <element signature="e#5303#5309#0" expanded="true" />
-            <element signature="e#5309#5315#0" expanded="true" />
-            <element signature="e#5315#5321#0" expanded="true" />
-            <element signature="e#5439#5445#0" expanded="true" />
-            <element signature="e#5445#5451#0" expanded="true" />
-            <element signature="e#5451#5457#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -690,16 +593,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/../honeycomms-eb/ebdjango/.ebextensions/django.config" />
-    <entry file="file://$PROJECT_DIR$/presite/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="11" column="76" selection-start-line="11" selection-start-column="76" selection-end-line="11" selection-end-column="76" />
-          <folding>
-            <element signature="e#0#37#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/presite/settings.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2322">
@@ -713,23 +606,6 @@
           <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
           <folding>
             <element signature="e#0#28#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="22" column="11" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/mall/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="5" column="43" selection-start-line="5" selection-start-column="43" selection-end-line="5" selection-end-column="43" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -759,44 +635,51 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="240" column="31" selection-start-line="240" selection-start-column="31" selection-end-line="240" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="119" column="118" selection-start-line="119" selection-start-column="118" selection-end-line="119" selection-end-column="118" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/mall/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/mall/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2934">
-          <caret line="173" column="31" selection-start-line="173" selection-start-column="31" selection-end-line="173" selection-end-column="31" />
+        <state relative-caret-position="180">
+          <caret line="10" column="52" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="52" />
           <folding>
             <element signature="e#0#35#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/mall/templates/mall/base.html">
+    <entry file="file://$PROJECT_DIR$/presite/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="432">
-          <caret line="39" column="36" selection-start-line="39" selection-start-column="36" selection-end-line="39" selection-end-column="36" />
-          <folding>
-            <element signature="e#4997#5003#0" expanded="true" />
-            <element signature="e#5003#5009#0" expanded="true" />
-            <element signature="e#5009#5015#0" expanded="true" />
-            <element signature="e#5088#5094#0" expanded="true" />
-            <element signature="e#5094#5100#0" expanded="true" />
-            <element signature="e#5100#5106#0" expanded="true" />
-            <element signature="e#5189#5195#0" expanded="true" />
-            <element signature="e#5195#5201#0" expanded="true" />
-            <element signature="e#5201#5207#0" expanded="true" />
-            <element signature="e#5303#5309#0" expanded="true" />
-            <element signature="e#5309#5315#0" expanded="true" />
-            <element signature="e#5315#5321#0" expanded="true" />
-            <element signature="e#5439#5445#0" expanded="true" />
-            <element signature="e#5445#5451#0" expanded="true" />
-            <element signature="e#5451#5457#0" expanded="true" />
-          </folding>
+        <state>
+          <caret column="31" selection-start-column="24" selection-end-column="31" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/static/css/honeycomms.css">
+    <entry file="file://$PROJECT_DIR$/mall/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="702">
-          <caret line="108" column="13" selection-start-line="108" selection-start-column="13" selection-end-line="108" selection-end-column="13" />
+          <caret line="54" column="35" selection-start-line="54" selection-start-column="35" selection-end-line="54" selection-end-column="35" />
         </state>
       </provider>
     </entry>

@@ -236,6 +236,11 @@ footer {
     color: #aaa;
 }
 
+.footer-text a {
+    color: #aaa;
+    text-decoration: underline;
+}
+
 .content33 {
     background-color: #333;
     font-size: 15px;
