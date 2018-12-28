@@ -96,13 +96,17 @@ body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
 
 .navbar-default .navbar-nav>li>a:hover { color: #FF8000; }
 
-#logo {
+#header_logo {
     position: relative;
     top: 0px;
     left: 0px;
     height: 50px;
     margin: 10px;
     padding: 0px;
+}
+
+#footer_logo {
+    height: 60px;
 }
 
 /* navbar 메뉴의 마우스오버, 활성화상태 서식 */
