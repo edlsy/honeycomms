@@ -7,9 +7,15 @@
             <ul class="optColor">
                 {% for color in product_colors %}
                 {% if product.device_name == color.device_name %}
-                <li>
-                    <span style="background-color:{{ color.color_code }}">{{ color.color_name }}</span>
-                </li>
+                    {% if color.color_modified_name %}
+                    <li tooltip-text="{{ color.color_modified_name }}">
+                        <span style="background-color:{{ color.color_modified_code }}"></span>
+                    </li>
+                    {% else %}
+                    <li tooltip-text="{{ color.color_name }}">
+                        <span style="background-color:{{ color.color_code }}"></span>
+                    </li>
+                    {% endif %}
                 {% endif %}
                 {% endfor %}
             </ul>

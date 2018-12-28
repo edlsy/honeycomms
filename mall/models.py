@@ -23,6 +23,8 @@ class Product_Color(models.Model):
     device_name = models.CharField(max_length=30)
     color_name = models.CharField(max_length=20)
     color_code = models.CharField(max_length=10)
+    color_modified_name = models.CharField(max_length=20, null=True)
+    color_modified_code = models.CharField(max_length=10, null=True)
     on_sale = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
@@ -45,7 +47,7 @@ class Customer(models.Model):
         return self.customer_name
 
 
-# 주문 마스터 테이블
+# 리뷰 마스터 테이블
 # 이 사이트에서의 주문은 리뷰작성임
 class Review(models.Model):
     review_id = models.AutoField(primary_key=True)

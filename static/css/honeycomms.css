@@ -206,6 +206,22 @@ ul.optColor li > span {
     text-indent: 9999px;
 }
 
+[tooltip-text]:hover {
+    position: relative;
+}
+
+[tooltip-text]:hover:after {
+    content: attr(tooltip-text);
+    position: absolute;
+    top: 2px;
+    left: 25px;
+    width: 120px;
+    background-color: rgba(0,0,0,0);
+    color: #555;
+    font-size: 12px;
+    z-index: 9999;
+}
+
 footer {
     position: absolute;
     width: 100%;
