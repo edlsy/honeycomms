@@ -49,9 +49,9 @@ class Customer(models.Model):
 # 이 사이트에서의 주문은 리뷰작성임
 class Review(models.Model):
     review_id = models.AutoField(primary_key=True)
-    # 고객/상품 마스터 레코드가 지워져도 리뷰는 남겨놔야 하기 때문에 on_delete=models.CASCADE는 적용안함
-    review_writer = models.ForeignKey('Customer')
-    review_device = models.ForeignKey('Product')
+    # 고객/상품 마스터 레코드가 지워져도 리뷰는 남겨놔야 하기 때문에 on_delete=models.CASCADE 대신 on_delete=models.SET_NULL로 처리
+    review_writer = models.ForeignKey('Customer', on_delete=models.SET_NULL, null=True)
+    review_device = models.ForeignKey('Product', on_delete=models.SET_NULL, null=True)
     review_text = models.TextField()
     review_created_at = models.DateTimeField(blank=False)
     created_at = models.DateTimeField(auto_now_add=True)
