@@ -184,6 +184,7 @@ div.prodPrice span {
 ul.optColor {
     position: absolute;
     border: 0px blue solid;
+    padding: 0px;
     bottom: 85px;
     left: calc(50% + 75px); /* 연산자 앞뒤 공백 꼭 필요. */
 }

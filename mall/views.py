@@ -151,25 +151,28 @@ def product_image_save(item_name_list, image_name_list, image_url_list):
     existing_image_names_list = os.listdir(os.path.join(BASE_DIR,"media","device_images"))
 
     for idx in range(len(image_name_list)):
-        print("index = {}".format(idx))
         temp_product = Product.objects.get(device_name=item_name_list[idx])
-        temp_image_file_name = (temp_product.device_image_file.name).split("/")[1]
 
-        if temp_image_file_name in existing_image_names_list:
+        # 저장된 DB에 이미지파일이 저장되어 있지 않으면 새롭게 파일 저장
+        # case#1 : 해당 기종이 DB에 등록되어 있고, 이미지폴더에 이미지가 저장되어 있다면
+        if (temp_product.device_image_file.name != "") and (temp_product.device_image_file.name.split("/")[1] in existing_image_names_list):
             print("{} already exists.".format(image_name_list[idx]))
             continue
+            
+        # case#2 : 해당 기종명으로 조회된 DB 레코드에 이미지가 저장되어 있지만 해당 기종 이미지가 이미지 폴더에 존재하지 않는다면
+        try:
+            temp_image = requests.get(image_url_list[idx])
+        except:
+            print("exception occurred. Retry~!!")
+            idx-=1
+            print("[retry] index = {}".format(idx))
+            continue
         else:
-            try:
-                temp_image = requests.get(image_url_list[idx])
-                temp_image_file = NamedTemporaryFile(delete=True)
-                temp_image_file.write(temp_image.content)
-                temp_image_file.flush()
-                temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
-                print("{} is just saved.".format(temp_product.device_image_file))
-                temp_product.on_sale = True
-                temp_product.save()
-            except ConnectionError:
-                print("ConnectionError occurred. Retry~!!")
-                idx-=1
-                print("[retry] index = {}".format(idx))
-                continue
+            temp_image_file = NamedTemporaryFile(delete=True)
+            temp_image_file.write(temp_image.content)
+            temp_image_file.flush()
+            temp_product.device_image_file.save(image_name_list[idx], File(temp_image_file))
+            print("{} is just saved.".format(temp_product.device_image_file))
+            temp_product.on_sale = True
+            temp_product.save()
+        

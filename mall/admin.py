@@ -3,7 +3,7 @@ from .models import Product, Product_Color, Customer
 
 @admin.register(Product)
 class ProductAdmin(admin.ModelAdmin):
-    list_display = ['device_name', 'on_sale', 'created_at', 'updated_at']
+    list_display = ['device_name', 'on_sale', 'device_image_file', 'created_at', 'updated_at']
     list_display_links = ['device_name']
 
 @admin.register(Product_Color)
