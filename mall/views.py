@@ -5,10 +5,11 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from django.core.files import File
 from tempfile import NamedTemporaryFile
+from .forms import OrderForm
 import os
 import requests
 from time import sleep
-from .models import Product, Product_Color, Customer
+from .models import Product, Product_Color, Customer, Gift, Review, Banner, Order
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 ktshop_site_url = "https://m.shop.kt.com:444/m/smart/agncyInfoView.do?vndrNo=AA01344&sortProd=SALE"
@@ -175,4 +176,13 @@ def product_image_save(item_name_list, image_name_list, image_url_list):
             print("{} is just saved.".format(temp_product.device_image_file))
             temp_product.on_sale = True
             temp_product.save()
-        
+
+
+def order(request):
+    form = OrderForm()
+    gifts = Gift.objects.filter(on_promotion=True)
+
+    if len(gifts) == 0:
+        return render(request, 'mall/order.html', {'form': form})
+    else:
+        return render(request, 'mall/order.html', {'form': form, 'gifts': gifts})

@@ -1,0 +1,140 @@
+{% extends 'mall/base.html' %}
+
+{% block content %}
+    {% for product in products %}
+    <div class="thumbnails col-xs-11 col-sm-6 col-md-4">
+        <div class="prodCell">
+            <ul class="optColor">
+                {% for color in product_colors %}
+                {% if product.device_name == color.device_name %}
+                    {% if color.color_modified_name %}
+                    <li tooltip-text="{{ color.color_modified_name }}">
+                        <span style="background-color:{{ color.color_modified_code }}"></span>
+                    </li>
+                    {% else %}
+                    <li tooltip-text="{{ color.color_name }}">
+                        <span style="background-color:{{ color.color_code }}"></span>
+                    </li>
+                    {% endif %}
+                {% endif %}
+                {% endfor %}
+            </ul>
+
+            <!-- 단말 이미지 클릭하면 주문정보 입력을 위한 모달 표시 -->
+            <a class="showOrderModal" data-toggle="modal" data-name="{{ product.device_name }}" data-url="{{ product.ktshop_link }}">
+                <img src="{{ product.device_image_file.url }}" alt="{{ product.device_name }}" class="prodImg center-block"/>
+                <div class="prodInfo center-block">
+                    <div class="prodName">{{ product.device_name }}</div>
+                    <div class="prodPrice">월 <span>{{ product.device_price }}</span>원~</div>
+                </div>
+            </a>
+
+            <!-- 주문정보 입력 모달 -->
+            <div class="modal fade" id="orderModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">
+                                <span aria-hidden="true">&times;</span>
+                                <span class="sr-only">Close</span>
+                            </button>
+                            <h4 class="modal-title">주문정보 입력 및 이동</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p><strong>주문하신 분 (필수)</strong></p>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="customer_name" class="sr-only">이름</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="이름">    
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ktshop_id" class="sr-only">KT샵ID</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="KT샵ID">    
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="customer_telnum" class="sr-only">전화번호</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="전화번호">
+                                    </div>
+                                </div>
+                            </form>
+                            <p><strong>구매후기 사은품 (필수)</strong></p>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="gift_name" class="sr-only">사은품</label>
+                                    <select class="form-control">
+                                        {% for gift in gifts %}
+                                        <option>{{ gift.gift_name }}</option>
+                                        {% endfor %}
+                                    </select>
+                                    <!--
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        구매후기 사은품 선택
+                                    </button>
+                                    <div class="dropdown">
+                                        <a data-toggle="dropdown" href="#"></a>
+                                        <ul class="dropdown-menu" role="menu">
+                                            {% for gift in gifts %}
+                                            <li role="presentation"><a role="menuitem" tabindex="-1">{{ gift.gift_name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </div>
+                                    -->
+                                </div>
+                                <p style="text-align:right;">구매후기 이벤트 자세히 보기</p>
+                            </form>
+                            <!--
+                            <p><strong>추천하신 분 (선택)</strong></p>
+                            <form role="form">
+                                <div class="form-group">
+                                    <label for="recommender_name" class="sr-only">추천인 이름</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="추천인 이름">
+                                    </div>  
+                                </div>
+                                <div class="form-group">
+                                    <label for="recommender_telnum" class="sr-only">추천인 전화번호</label>
+                                    <div class="">
+                                        <input type="text" class="form-control" placeholder="추천인 전화번호">
+                                    </div>
+                                </div>
+                            </form>
+                            <div class="panel-heading" role="tab" id="headingOne">
+                                <div class="panel-title">
+                                    <input type="checkbox" id="w1" required="">
+                                    <a class="detail_view collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                        구매 절차를 확인하셨습니까?
+                                    </a>
+                                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne" class="agree-down collapsed">▼</a>                                    
+                                </div>
+                                <input type="checkbox" id="w1" required="">
+                            </div>
+                            -->
+                            <br>
+                            <p>KTshop의 <span class="product_name"></span> 구매페이지로 이동합니다.</p>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">닫기</button>
+                            <a href="" class="btn btn-primary ktshop_url" target="_blank">KTshop으로 이동</a>
+                        </div>
+                    </div>  <!-- /.modal-content -->
+                </div>  <!-- /.modal-dialog -->
+            </div>  <!-- /.modal -->
+            
+            <!--
+            <a href="{{ product.ktshop_link }}" target="_blank">
+                <img src="{{ product.device_image_file.url }}" alt="{{ product.device_name }}" style="height:300px;" class="center-block"/>
+                <div class="prodInfo center-block">
+                    <div class="prodName">{{ product.device_name }}</div>
+                    <div class="prodPrice">월 <span>{{ product.device_price }}</span>원~</div>
+                </div>
+            </a>
+            -->
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

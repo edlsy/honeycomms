@@ -18,8 +18,29 @@ a:link, a:visited, a:active, a:hover {
 
 a:hover { text-decoration: none;}
 
-/* navbar 영역 고려하여 padding-top:90px 설정하고 본문글꼴로 나눔바른고딕 설정 */
-body {font-family: "NanumBarunGothic",  sans-serif; padding-top: 70px; }
+/* navbar 영역 고려하여 padding-top 설정하고 본문글꼴로 나눔바른고딕 설정 */
+/* modal 오픈 시 화면움직임 방지를 위해 body는 fixed로 하고 wrapper 이용 */
+body {
+    font-family: "NanumBarunGothic", "sans-serif"; 
+    padding-top: 70px; 
+}
+
+.wrapper {
+    overflow-y: auto;
+}
+
+/* modal 오픈 시 전체화면 움직임 방지를 위해 modal의 position:fixed */
+.modal {
+    position: fixed;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+
+.modal-open {
+    overflow:hidden;
+    overflow-y:scroll;
+    padding-right:0 !important;
+}
 
 /* .container-fluid 선택자 좌우 패딩값을 0으로 */
 .container-fluid { padding: 0;}
@@ -136,9 +157,14 @@ div.thumbnails {
 div.prodCell {
     border: 0px red solid;
     max-width: 250px;
-    center-block;
     float: none;
     margin: 0 auto;
+}
+
+/* 기기사진 */
+img.prodImg {
+    height: 300px;
+    cursor: pointer;
 }
 
 /* 기기사진 하단 이름, 가격 표시영역 */
@@ -287,7 +313,7 @@ footer {
 /* IE10+ CSS styles go here */
 @media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
     ul.optColor {
-        left: calc(50% + 40px); /* 연산자 앞뒤 공백 꼭 필요. */
+        left: calc(50% + 75px); /* 연산자 앞뒤 공백 꼭 필요. */
     }
 }
 

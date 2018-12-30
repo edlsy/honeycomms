@@ -3,5 +3,5 @@ ul.optColor {
     position: absolute;
     border: 0px blue solid;
     bottom: 85px;
-    left: calc(50% + 45px) !ie; /* 연산자 앞뒤 공백 꼭 필요. for IE9 */
+    left: calc(50% + 75px) !ie; /* 연산자 앞뒤 공백 꼭 필요. for IE9 */
 }
