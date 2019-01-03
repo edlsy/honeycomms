@@ -22,10 +22,10 @@
 
             <!-- 단말 이미지 클릭하면 주문정보 입력을 위한 모달 표시 -->
             <a href="{% url 'order' %}" class="showOrderModal" data-toggle="modal" data-name="{{ product.device_name }}" data-url="{{ product.ktshop_link }}">
-                <img src="{{ product.device_image_file.url }}" alt="{{ product.device_name }}" class="prodImg center-block"/>
+                <img src="{{ product.device_image_file.url }}" alt="{{ product.device_name }}" class="prodImg mx-auto d-block"/>
                 <div class="prodInfo center-block">
                     <div class="prodName">{{ product.device_name }}</div>
-                    <div class="prodPrice">월 <span>{{ product.device_price }}</span>원~</div>
+                    <div class="prodPrice">월<span>{{ product.device_price }}</span>원~</div>
                 </div>
             </a>            
             

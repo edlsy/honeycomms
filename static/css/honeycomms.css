@@ -9,20 +9,18 @@ a:link, a:visited, a:active, a:hover {
     text-decoration: none;
 }
 
-/* 나눔바른고딕 설정 */
+/* 나눔고딕 설정 */
 @font-face{
-    font-family:'NanumBarunGothic';
-    src:url("../fonts/NanumBarunGothic.eot");
-    src:local("☺"),url("../fonts/NanumBarunGothic.woff") format("woff");
+    font-family:'Nanumothic';
+    src:url("../fonts/NanumGothic.eot");
+    src:local("☺"), url("../fonts/NanumGothic.woff") format("woff");
 }
 
 a:hover { text-decoration: none;}
 
-/* navbar 영역 고려하여 padding-top 설정하고 본문글꼴로 나눔바른고딕 설정 */
-/* modal 오픈 시 화면움직임 방지를 위해 body는 fixed로 하고 wrapper 이용 */
 body {
-    font-family: "NanumBarunGothic", "sans-serif"; 
-    padding-top: 70px; 
+    width: 100%;
+    font-family: "NanumGothic", sans-serif;
 }
 
 .wrapper {
@@ -52,6 +50,13 @@ body {
     max-width: 980px;
 }
 
+.bs-header-container {
+    padding: 0;
+    margin: 0 auto;
+    max-width: 980px;
+}
+
+
 .banner-block {
     display: flex;
     justify-content: center;
@@ -61,8 +66,39 @@ body {
     margin: 0;
 }
 
+/* carousel.scss 오버라이딩 : width:15% -> 10% */
+.carousel-control-next, .carousel-control-prev {
+    width: 10%;
+}
+
+.bs-carousel-control-prev, .bs-carousel-control-next {
+    background-size: 20px !important;
+    opacity: .5;
+    transition: background-image .8s ease-in-out;
+    width: 70px;
+}
+
+.bs-carousel-control-prev {
+    background: url(../imgs/left.png) no-repeat center;
+    /*
+    left: -webkit-calc(50% - 600px);
+    left: -moz-calc(50% - 600px);
+    left: calc(50% - 600px);
+    right: auto;
+    */
+}
+
+.bs-carousel-control-next {
+    background: url(../imgs/right.png) no-repeat center;
+    /*
+    left: -webkit-calc(50% - 600px);
+    left: -moz-calc(50% - 600px);
+    left: calc(50% - 600px);
+    right: auto;
+    */
+}
+
 .product-block {
-    display: flex;
     justify-content: center;
     max-width: 980px;
     text-align: left;
@@ -70,64 +106,28 @@ body {
     margin: 50px 0;
 }
 
-/* navbar에 대한 설정 */
-.navbar {
-    background-color: #eee;
-    border: none;
-    padding-bottom: 10px;
-    font-family: 'Source Sans Pro', sans-serif;
-    font-weight: 300;
-    font-size: 18px;
-    height: 70px;
-    text-transform: capitalize;
-    border-bottom: 1px solid #AAAAAA;
-}
-
-/* 화면이 축소될 때 navbar에 들어갈 메뉴버튼 위치 선정 */
-.navbar-default .navbar-toggle {
-    position: relative;
-    margin-top: 15px;
-    margin-right: 20px;
-    border-color: #666;
-}
-
-.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    border-color: #ccc;
-    background-color: transparent;
-}
-
-/* 메뉴 위치 선정 */
-.navbar-nav {
-    position: absolute;
-    padding-right: 10px;
-    right: 0px;
-    margin-top: 10px;
-}
-
-/* 메뉴 텍스트 부분 설정 */
-.navbar-default .navbar-nav li { margin: 0 20px; }
-.navbar-default .navbar-nav li a { color: #333; }
-
-.navbar-brand {
-    margin: 0;
-    padding: 10px;
-}
-
-.navbar-collapse { padding-top: 10px; background-color: #eee; }
-
-.navbar-default .navbar-nav>li>a:hover { color: #FF8000; }
-
 #header_logo {
     position: relative;
     top: 0px;
     left: 0px;
     height: 50px;
-    margin: 10px;
+    margin: 0 100px 0 10px;
     padding: 0px;
 }
 
 #footer_logo {
     height: 60px;
+}
+
+.navbar {
+    background-color: #eee;
+    border: none;
+    padding: 0;
+    font-weight: 500;
+    font-size: 18px;
+    height: 70px;
+    letter-spacing: -1px;
+    border-bottom: 1px solid #ccc;
 }
 
 /* navbar 메뉴의 마우스오버, 활성화상태 서식 */
@@ -169,14 +169,15 @@ img.prodImg {
 
 /* 기기사진 하단 이름, 가격 표시영역 */
 div.prodInfo {
-    width: 80%;
+    width: 100%;
     border: 0px #ccc solid;
 }
 
 /* 기종명 서식 */
 div.prodName {
-    padding: 2px 0px;
-    font-size: 22px;
+    padding: 4px 0px 2px 0px;
+    margin: 0 30px;
+    font-size: 20px;
     font-weight: 400;
     border-bottom: 2px solid #efefef;
     text-align: center;
@@ -189,7 +190,8 @@ div.prodPrice {
     height: 40px;
     font-size: 14px;
     font-weight: 400;
-    padding: 7px 0px;
+    padding: 4px 0px 2px 0px;
+    margin: 0 30px;
     border-bottom: 2px solid #efefef;
     text-align: center;
     color: #000;
@@ -270,6 +272,7 @@ footer {
     font-weight: 200;
     color: #fff;
     text-align: left;
+    letter-spacing: -1px;
 }
 
 .footer-text {
@@ -277,6 +280,7 @@ footer {
     text-align: left;
     font-weight: 100;
     color: #aaa;
+    letter-spacing: -1px;
 }
 
 .footer-text a {
@@ -317,16 +321,39 @@ footer {
     }
 }
 
-@media (max-width: 767px) {
-    .container {
-        padding: 0;
-        margin: 0 10px;
-        position: relative;
-        width: 100%;
-    }
+/*----------------------------------------------
+################################################
+모바일 설정
+################################################
+----------------------------------------------*/
 
+@media (max-width: 767px) {
     .navbar {
         height: 60px;
+    }
+
+    .toggler-add {
+        float: right;
+        z-index: 7;
+        left: 90%;
+    }
+
+    #header_logo {
+        display: inline-block;
+        height: 35px;
+        padding: 0px;
+        margin: 0px;
+        left: 10%;
+    }
+
+    .bs-navbar-mobile {
+        position: fixed;
+        top: 60px;
+        background-color: #333333;
+        right: 0;
+        z-index: 10;
+        max-height: calc(100% - 60px);
+        overflow-y: scroll;
     }
 
     #logo {
@@ -344,7 +371,7 @@ footer {
     }
 
     div.prodInfo {
-        max-width: 200px;
+        max-width: 250px;
     }
 
     div.prodName {
