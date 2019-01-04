@@ -3,15 +3,15 @@ from django.db import models
 
 # 상품 마스터 테이블
 class Product(models.Model):
-    device_name = models.CharField(max_length=30, primary_key=True)
-    device_code = models.CharField(max_length=20)
-    device_price = models.CharField(max_length=10)
-    device_image_url = models.URLField(null=True)
+    device_name = models.CharField(max_length=30, primary_key=True, verbose_name="상품명")
+    device_code = models.CharField(max_length=20, verbose_name="상품코드(ktshop)")
+    device_price = models.CharField(max_length=10, verbose_name="가격")
+    device_image_url = models.URLField(null=True, verbose_name="사진URL")
     device_image_file = models.ImageField(upload_to="device_images", null=True, blank=True)
-    ktshop_link = models.CharField(max_length=200, default="")
-    on_sale = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    ktshop_link = models.CharField(max_length=200, default="", verbose_name="KTshop URL")
+    on_sale = models.BooleanField(default=False, verbose_name="판매여부")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일시")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="변경일시")
 
     def __str__(self):
         return self.device_name
@@ -19,18 +19,17 @@ class Product(models.Model):
 
 # 상품-색상 조합 관리 테이블
 class Product_Color(models.Model):
-    combi_name = models.CharField(max_length=50, primary_key=True)  #펫네임-색상명
-    device_name = models.CharField(max_length=30)
-    color_name = models.CharField(max_length=20)
-    color_code = models.CharField(max_length=10)
-    color_modified_name = models.CharField(max_length=20, null=True)
-    color_modified_code = models.CharField(max_length=10, null=True)
-    on_sale = models.BooleanField(default=False)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
+    device_name = models.ForeignKey('Product', on_delete=models.CASCADE, null=False) # 선택 기종명
+    color_name = models.CharField(max_length=20, verbose_name="색상명(KTshop)")
+    color_code = models.CharField(max_length=10, verbose_name="색상코드(KTshop)")
+    color_modified_name = models.CharField(max_length=20, null=True, blank=True, verbose_name="상품색상(변경)")
+    color_modified_code = models.CharField(max_length=7, null=True, blank=True, verbose_name="색상코드(변경)")
+    on_sale = models.BooleanField(default=False, verbose_name="판매여부")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일시")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="변경일시")
 
     def __str__(self):
-        return self.combi_name
+        return self.color_name
 
 
 # 고객 마스터 테이블

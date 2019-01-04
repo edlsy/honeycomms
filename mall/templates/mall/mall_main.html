@@ -6,7 +6,7 @@
         <div class="prodCell">
             <ul class="optColor">
                 {% for color in product_colors %}
-                {% if product.device_name == color.device_name %}
+                {% if color.device_name == product %}
                     {% if color.color_modified_name %}
                     <li tooltip-text="{{ color.color_modified_name }}">
                         <span style="background-color:{{ color.color_modified_code }}"></span>

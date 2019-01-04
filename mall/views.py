@@ -26,14 +26,14 @@ def mall_product_list(request):
 
 # 슬러그 init/으로 접속했을 때 KTshop 업데이트 내용을 새롭게 반영하여 KT Direct 메인화면 출력 (관리자용)
 def mall_product_list_init(request):
-    item_name = {}
-    item_price = {}
-    item_code = {}
-    thumbs_link = {}
-    color_name = {}
-    color_code = {}
-    image_name = {}
-    ktshop_link = {}
+    ktshop_product_name = {}
+    ktshop_product_price = {}
+    ktshop_product_code = {}
+    ktshop_thumbs_link = {}
+    ktshop_color_name = {}
+    ktshop_color_code = {}
+    ktshop_image_name = {}
+    ktshop_product_link = {}
     ktshop_url = "https://shop.kt.com/smart/productView.do?prodNo=&vndrNo=&supportType=02"
     vndr_code = "AA01344"   # 허니컴즈 대리점코드
 
@@ -63,42 +63,22 @@ def mall_product_list_init(request):
     # 단말정보(기종명, 가격) 블럭수만큼 loop를 실행하면서 기종명, 가격, 기종코드를 읽어들임
     print("1st loop start : ", datetime.now())
     for idx, prodInfo in enumerate(prodInfo_blocks):
-        item_name[idx] = prodInfo.ul.find("li", {"class": "prodName"}).text
-        item_price[idx] = prodInfo.ul.find("li", {"class": "prodPrice"}).span.text
+        ktshop_product_name[idx] = prodInfo.ul.find("li", {"class": "prodName"}).text
+        ktshop_product_price[idx] = prodInfo.ul.find("li", {"class": "prodPrice"}).span.text
         href_value = prodInfo.ul.find("li", {"class": "prodSupport"}).findAll("a")[0].attrs['href']
-        item_code[idx] = href_value[25:35]
+        ktshop_product_code[idx] = href_value[25:35]
     print("1st loop end   : ", datetime.now())
 
     # 단말 이미지/색상 블럭수만큼 loop를 실행하면서 단말 이미지링크와 색상블럭을 읽어들임
     print("2nd loop start : ", datetime.now())
-    # 단말 수만큼 loop를 실행하면서 단말 이미지링크를 읽고 단말 이지미를 저장함
+
+    # 단말 수만큼 loop를 실행하면서 단말 이미지링크를 읽고 단말 이미지를 저장함
     for idx, thumbs in enumerate(thumbs_blocks):
-        thumbs_link[idx] = thumbs.findAll("img")[0].attrs['src']
+        ktshop_thumbs_link[idx] = thumbs.findAll("img")[0].attrs['src']
         color_blocks = thumbs.find("ul", {"class": "optColor"}).findAll("li")
 
-        # 단말색상 블럭에서 색상명과 색상값을 읽어들임 (전체 페이지의 단말색상 블럭수만큼 loop)
-        for idx2, color_blocks in enumerate(color_blocks):
-            color_name[idx2] = color_blocks.find("span").text
-            temp_color_code = color_blocks.find("span").attrs['style']
-            color_code[idx2] = temp_color_code[17:24]
-
-            # 기존 DB에 지금의 기종명+색상명과 일치하는 row가 없으면, 지금의 기종명+색상명 데이터를 Product_Color 테이블의 새로운 레코드로 추가
-            if len(Product_Color.objects.filter(combi_name=(item_name[idx] + "-" + color_name[idx2]))) == 0:
-                Product_Color(
-                    combi_name=(item_name[idx] + "-" + color_name[idx2]),
-                    device_name=item_name[idx],
-                    color_name=color_name[idx2],
-                    color_code=color_code[idx2],
-                    on_sale=True
-                ).save()
-
-            # 현재 KTshop에 판매 중인 모든 색상에 대해 on_sale=True 설정
-            temp_product_color = Product_Color.objects.get(combi_name=(item_name[idx] + "-" + color_name[idx2]))
-            temp_product_color.on_sale = True
-            temp_product_color.save()
-
-        ktshop_link[idx] = ktshop_device_url(ktshop_url, item_code[idx], 48, vndr_code, 56)
-        image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
+        ktshop_product_link[idx] = get_ktshop_device_url(ktshop_url, ktshop_product_code[idx], 48, vndr_code, 56)
+        ktshop_image_name[idx] = ktshop_product_name[idx] + os.path.splitext(os.path.basename(ktshop_thumbs_link[idx]))[1]
         '''
         temp_image = urlretrieve(thumbs_link[idx])
         image_name[idx] = item_name[idx] + os.path.splitext(os.path.basename(thumbs_link[idx]))[1]
@@ -107,31 +87,51 @@ def mall_product_list_init(request):
         '''
 
         # Product 테이블에 현재의 기종명 레코드가 없으면 새로운 레코드 저장 후 on_sale=True
-        if len(Product.objects.filter(device_name=item_name[idx])) == 0:
+        if len(Product.objects.filter(device_name=ktshop_product_name[idx])) == 0:
             Product(
-                device_name=item_name[idx],
-                device_price=item_price[idx],
-                device_code=item_code[idx],
-                ktshop_link=ktshop_link[idx],
-                device_image_url=thumbs_link[idx],
-                on_sale=True
+                device_name = ktshop_product_name[idx],
+                device_price = ktshop_product_price[idx],
+                device_code = ktshop_product_code[idx],
+                ktshop_link = ktshop_product_link[idx],
+                device_image_url = ktshop_thumbs_link[idx],
+                on_sale = True
             ).save()
             #temp_product = Product.objects.get(device_name=item_name[idx])
             #temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
         # Product 테이블에 현재의 기종명 레코드가 있으면 해당 레코드에 KTshop 크롤링값을 업데이트 후 on_sale=True
         else:
-            temp_product = Product.objects.get(device_name=item_name[idx])
-            temp_product.device_price = item_price[idx]
-            temp_product.device_code = item_code[idx]
-            temp_product.ktshop_link = ktshop_link[idx]
-            temp_product.device_image_url = thumbs_link[idx]
+            temp_product = Product.objects.get(device_name=ktshop_product_name[idx])
+            temp_product.device_price = ktshop_product_price[idx]
+            temp_product.device_code = ktshop_product_code[idx]
+            temp_product.ktshop_link = ktshop_product_link[idx]
+            temp_product.device_image_url = ktshop_thumbs_link[idx]
             #temp_product.device_image_file.save(temp_image_name, File(open(temp_image[0], 'rb')))
             temp_product.on_sale = True
             temp_product.save()
 
+        # 단말색상 블럭에서 색상명과 색상값을 읽어들임 (전체 페이지의 단말색상 블럭수만큼 loop)
+        for idx2, color_blocks in enumerate(color_blocks):
+            ktshop_color_name[idx2] = color_blocks.find("span").text
+            temp_color_code = color_blocks.find("span").attrs['style']
+            ktshop_color_code[idx2] = temp_color_code[17:24]
+
+            # 기존 DB에 지금의 색상명과 일치하는 row가 없으면, 지금의 색상명 데이터를 Product_Color 테이블의 새로운 레코드로 추가
+
+            if len(Product_Color.objects.filter(device_name=ktshop_product_name[idx], color_name=ktshop_color_name[idx2]))==0:
+                temp_product = Product.objects.get(device_name=ktshop_product_name[idx])
+                Product_Color.objects.create(device_name=temp_product,
+                    color_name=ktshop_color_name[idx2],
+                    color_code=ktshop_color_code[idx2],
+                    on_sale=True)
+
+            # 현재 KTshop에 판매 중인 모든 색상에 대해 on_sale=True 설정
+            temp_product_color = Product_Color.objects.get(device_name=ktshop_product_name[idx], color_name=ktshop_color_name[idx2])
+            temp_product_color.on_sale = True
+            temp_product_color.save()
+
     print("2nd loop end   : ", datetime.now())
 
-    product_image_save(item_name, image_name, thumbs_link)
+    product_image_save(ktshop_product_name, ktshop_image_name, ktshop_thumbs_link)
 
     print("img save end   : ", datetime.now())
 
@@ -142,7 +142,7 @@ def mall_product_list_init(request):
 
 
 # 파라미터를 조합하여 해당 단말의 KTshop URL 리턴
-def ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_code_idx):
+def get_ktshop_device_url(ktshop_url, device_code, device_code_idx, vndr_code, vndr_code_idx):
     return ktshop_url[:device_code_idx] + device_code + ktshop_url[device_code_idx:vndr_code_idx] + vndr_code + ktshop_url[vndr_code_idx:]
 
 
