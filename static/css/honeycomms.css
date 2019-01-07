@@ -295,6 +295,25 @@ footer {
     color: #aaa;
 }
 
+.sy-order-block {
+    margin: 50px 15%;
+}
+
+.sy-section-header {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.sy-section-label {
+    font-size: 25px;
+    font-weight: 500;
+    color: #333;
+    letter-spacing: -1px;
+}
+
+.sy-section-body {
+}
+
 #footer_security_img {
     position: absolute;
     top: 50px;

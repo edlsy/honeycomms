@@ -24,6 +24,7 @@ def mall_product_list(request):
     print("end   : ", datetime.now())
     return render(request, 'mall/mall_main.html', {'products': products, 'product_colors': product_colors})
 
+
 # 슬러그 init/으로 접속했을 때 KTshop 업데이트 내용을 새롭게 반영하여 KT Direct 메인화면 출력 (관리자용)
 def mall_product_list_init(request):
     ktshop_product_name = {}
