@@ -5,6 +5,7 @@ from datetime import datetime
 from bs4 import BeautifulSoup
 from django.core.files import File
 from tempfile import NamedTemporaryFile
+from django.views.generic import CreateView
 from .forms import OrderForm
 import os
 import requests
@@ -179,10 +180,16 @@ def product_image_save(item_name_list, image_name_list, image_url_list):
             temp_product.save()
 
 
-def order(request):
-    form = OrderForm()
+def order_new(request):
     gifts = Gift.objects.filter(on_promotion=True)
-
+    if request.method == "POST":
+        form = OrderForm(request.POST)
+        if form.is_valid():
+            order = form.save(commit=False)
+            order.created_at = timezone.now()
+            order.save()
+    else:
+        form = OrderForm()
     if len(gifts) == 0:
         return render(request, 'mall/order.html', {'form': form})
     else:
